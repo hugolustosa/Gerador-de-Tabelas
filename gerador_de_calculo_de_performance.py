@@ -12,8 +12,8 @@ import win32com.client as win32
 
 #DADOS DE ENTRADA
 
-cen_preco_qav = '4.00' # 5.00 / 4.50 / 4.00
-cen_base_qav = 'SBCB' #todas_bases / SBJR / SBMI / SBCB 
+cen_preco_qav = '5.00' # 5.00 / 4.50 / 4.00
+cen_base_qav = 'todas_bases' #todas_bases / SBJR / SBMI / SBCB 
 
 
 cenario = f'Cenario_qav_{cen_preco_qav}_reais_{cen_base_qav}'
