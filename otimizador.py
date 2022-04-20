@@ -937,40 +937,7 @@ print(f'Tempo de processamento = {depois-antes:.3f} segundos')
 print('')
 
 ###########################################################
-# =============================================================================
-# # enviar e-mail
-# 
-# # criar a integração com o Outlook
-# outlook = win32.Dispatch('outlook.application')
-# 
-# # criar um e-mail
-# email = outlook.CreateItem(0)
-# 
-# # configurar as informações do seu e-mail
-# 
-# #email.To = 'seuemail@petrobras.com.br'
-# 
-# #email.CC = 'seuemail@xxxxx.com.br; seuemail@xxxxx.com.br'
-# 
-# #email.BCC = 'seuemail@xxxxx.com.br; seuemail@xxxxx.com.br'
-# 
-# email.Subject = f'Planejamento Tabelão'
-# 
-# email.HTMLBody = f'''
-# <p>Prezado(a) esta é uma mensagem automática do Gerador de Prévia de Voo OffshoreBS.</p>
-# <p>Segue anexo o planejamento Tabelão.</p>
-# <p>Atenciosamente,</p>
-# <p><b>Equipe Gerador de Prévia de Voo OffshoreBS</b></p>
-# '''
-# 
-# anexo1 = f'C:/Users/kk3f/OneDrive - PETROBRAS/Desktop/Gerador de Tabelas 2.0/OUTPUT_{cenario}.xlsx'
-# 
-# email.Attachments.Add(anexo1)
-# 
-# email.Send()
-# 
-# print('E-mail enviado')
-# =============================================================================
+
 
 
 
