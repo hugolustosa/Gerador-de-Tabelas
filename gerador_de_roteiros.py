@@ -270,7 +270,7 @@ print('TEMPO_MISSAO_MP = ', f'{TEMPO_MISSAO_MP:.2f} h')
 
 hora_zulu = str(int(data_hora[11:13])+3)
 data_resumida = data_hora[:4] + data_hora[5:7] + data_hora[8:10] + hora_zulu
-chave_api = 'v94XYrJBplN12IGakJryyQ9j7o11pHa3XBZ0M4SP'
+chave_api = 'coloque sua chave API redemet aqui'
 
 informacao = requests.get(f"https://api-redemet.decea.mil.br/aerodromos/info?api_key={chave_api}&localidade={origem}&datahora={data_resumida}")
 
@@ -437,40 +437,6 @@ plt.savefig(f'Roteiro {origem} - {destino} - {pouso_final}_{data_hora}.jpg',
 
 
 ###########################################################
-# enviar e-mail
-
-# criar a integração com o Outlook
-outlook = win32.Dispatch('outlook.application')
-
-# criar um e-mail
-email = outlook.CreateItem(0)
-
-# configurar as informações do seu e-mail
-
-email.To = 'kk3f@petrobras.com.br'
-
-email.CC = 'ak1r@petrobras.com.br'
-
-#email.BCC = 'seuemail@xxxxx.com.br; seuemail@xxxxx.com.br'
-
-email.Subject = f'Planejamento Roteiro: {origem} -> {destino} -> {pouso_final}'
-
-email.HTMLBody = f'''
-<p>Prezado(a) esta é uma mensagem automática do Gerador de Prévia de Voo Offshore.</p>
-<p>Segue anexo o planejamento do Roteiro: <u>{origem} -> {destino} -> {pouso_final}</u>.</p>
-<p>Atenciosamente,</p>
-<p><b>Equipe Gerador de Prévia de Voo Offshore</b></p>
-'''
-
-anexo1 = f'C:/Users/kk3f/OneDrive - PETROBRAS/Desktop/Gerador de Tabelas 2.0/Roteiro {origem} - {destino} - {pouso_final}_{data_hora}.jpg'
-anexo2 = f'C:/Users/kk3f/OneDrive - PETROBRAS/Desktop/Gerador de Tabelas 2.0/Roteiro {origem} - {destino} - {pouso_final}_{data_hora}.html'
-
-email.Attachments.Add(anexo1)
-email.Attachments.Add(anexo2)
-
-email.Send()
-
-print('E-mail enviado')
 
 
 
