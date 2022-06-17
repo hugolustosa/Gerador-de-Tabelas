@@ -86,7 +86,7 @@ for i in lista_permutacoes_total:
 ###########################################################
 # dados das poligonais da BS 
 
-'''https://automating-gis-processes.github.io/CSC18/lessons/L4/point-in-polygon.html'''
+'''inspirado em https://automating-gis-processes.github.io/CSC18/lessons/L4/point-in-polygon.html'''
 
 poligono_coords_BS = Polygon([(-23.7108916666667,-43.6677416666667),(-23.5687611111111,-43.1358916666667),(-23,1775611111111,-42.7796305555556),(-23,1029444444444,-42.4989027777778),(-23,5058833333333,-42.4989),(-23,5058805555556,-41.9987138888889),(-24,3333333333333,-41.6666666666667),(-25,-41.6666666666667),(-25.6666666666667,-42.3333333333333),(-26.333325,-43.3333138888889),(-26.333325,-43.6666472222222)])
 
@@ -950,7 +950,7 @@ for permutacao in range(len(lista_permutacoes)):
     
     hora_zulu = str(int(data_hora[11:13])+3)
     data_resumida = data_hora[:4] + data_hora[5:7] + data_hora[8:10] + hora_zulu
-    chave_api = 'v94XYrJBplN12IGakJryyQ9j7o11pHa3XBZ0M4SP'
+    chave_api = 'inserir chave api redemet aqui'
     # 
     informacao_origem = requests.get(f"https://api-redemet.decea.mil.br/aerodromos/info?api_key={chave_api}&localidade={origem}&datahora={data_resumida}")
      
@@ -1227,46 +1227,7 @@ for permutacao in range(len(lista_permutacoes)):
     dicionario_resultado[lista_permutacoes[permutacao]] = round(valor_roteiro_total, 1)
 
     
-    ###########################################################
-    # enviar e-mail
-    
-# =============================================================================
-#     # criar a integração com o Outlook
-#     outlook = win32.Dispatch('outlook.application')
-#     
-#     # criar um e-mail
-#     email = outlook.CreateItem(0)
-#     
-#     # configurar as informações do seu e-mail
-#     
-#     email.To = 'kk3f@petrobras.com.br'
-#     
-#     #email.CC = 'bh67@petrobras.com.br'
-#     
-#     #email.BCC = 'seuemail@xxxxx.com.br; seuemail@xxxxx.com.br'
-#     
-#     email.Subject = f'Planejamento Roteiro: {origem} -> {destino1} -> {destino2} -> {destino3} -> {destino4} -> {pouso_final}'
-#     
-#     email.HTMLBody = f'''
-#     <p>Prezado(a) esta é uma mensagem automática do Gerador de Prévia de Voo Offshore.</p>
-#     <p>Segue anexo o planejamento do Roteiro: <u>{origem} -> {destino1} -> {destino2} -> {destino3} -> {destino4} -> {pouso_final}</u>.</p>
-#     <p>Atenciosamente,</p>
-#     <p><b>Equipe Gerador de Prévia de Voo Offshore</b></p>
-#     '''
-#     
-#     anexo1 = f'C:/Users/kk3f/OneDrive - PETROBRAS/Desktop/gerador roteiros 3.0/Roteiro {origem} - {destino1} - {destino2} - {destino3} - {destino4} - {pouso_final}_{data_hora}.pdf'
-#     anexo2 = f'C:/Users/kk3f/OneDrive - PETROBRAS/Desktop/gerador roteiros 3.0/Roteiro {origem} - {destino1} - {destino2} - {destino3} - {destino4} - {pouso_final}_{data_hora}.html'
-#     
-#     email.Attachments.Add(anexo1)
-#     email.Attachments.Add(anexo2)
-#     
-#     email.Send()
-#     
-#     print(f'E-mail enviado {lista_permutacoes[permutacao]} {permutacao+1}/{len(lista_permutacoes)}')
-#     
-# 
-# print('#####################')    
-# =============================================================================
+
 
 print('#####################')  
 print('')
