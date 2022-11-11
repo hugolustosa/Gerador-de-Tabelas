@@ -997,7 +997,7 @@ for permutacao in range(len(lista_permutacoes)):
     
     hora_zulu = str(int(data_hora[11:13])+3)
     data_resumida = data_hora[:4] + data_hora[5:7] + data_hora[8:10] + hora_zulu
-    chave_api = 'v94XYrJBplN12IGakJryyQ9j7o11pHa3XBZ0M4SP'
+    chave_api = 'colar chave API redemet aqui'
     
     try:
         informacao_origem = requests.get(f"https://api-redemet.decea.mil.br/aerodromos/info?api_key={chave_api}&localidade={origem}&datahora={data_resumida}")
